@@ -14,6 +14,22 @@ if __name__ == '__main__':
     window = turtle.Screen()
     window.bgcolor('white')
 
+    for i in range(10):
+        tot = turtle.Turtle()
+        tot.speed(0)
+        tot.circle(100,360,4)
+        tot.pensize(10)
+        color = simpledialog.askstring(title="Color",prompt="What color would you like to draw with?")
+        if color == ("green"):
+            tot.pencolor('green')
+        elif color == ("red"):
+            tot.pencolor('red')
+        elif color == ("blue"):
+            tot.pencolor('blue')
+        else:
+            tot.pencolor(color.random)
+
+
     # TODO 1) Create a new Turtle
     #      2) Make the turtle draw a shape (this will take more than one line
     #         of code)
